@@ -2,10 +2,10 @@
 
 namespace Database\Seeders;
 
-use App\Models\Materi;
+use App\Models\Kelas;
 use Illuminate\Database\Seeder;
 
-class MateriSeeder extends Seeder
+class KelasSeeder extends Seeder
 {
   /**
    * Run the database seeds.
@@ -14,6 +14,6 @@ class MateriSeeder extends Seeder
    */
   public function run()
   {
-    Materi::factory()->count(10)->create();
+    Kelas::factory()->count(5)->create();
   }
 }

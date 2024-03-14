@@ -2,10 +2,10 @@
 
 namespace Database\Seeders;
 
-use App\Models\Materi;
+use App\Models\Absensi;
 use Illuminate\Database\Seeder;
 
-class MateriSeeder extends Seeder
+class AbsensiSeeder extends Seeder
 {
   /**
    * Run the database seeds.
@@ -14,6 +14,6 @@ class MateriSeeder extends Seeder
    */
   public function run()
   {
-    Materi::factory()->count(10)->create();
+    Absensi::factory()->count(5)->create();
   }
 }
