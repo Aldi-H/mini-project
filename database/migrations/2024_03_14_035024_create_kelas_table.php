@@ -6,29 +6,28 @@ use Illuminate\Support\Facades\Schema;
 
 class CreateKelasTable extends Migration
 {
-    /**
-     * Run the migrations.
-     *
-     * @return void
-     */
-    public function up()
-    {
-        Schema::create('kelas', function (Blueprint $table) {
-            $table->id();
-            $table->foreignId('id_materi');
-            $table->foreignId('id_user');
-            $table->string('nama_kelas');
-            $table->timestamps();
-        });
-    }
+  /**
+   * Run the migrations.
+   *
+   * @return void
+   */
+  public function up()
+  {
+    Schema::create('kelas', function (Blueprint $table) {
+      $table->id();
+      $table->foreignId('id_materi');
+      $table->string('nama_kelas');
+      $table->timestamps();
+    });
+  }
 
-    /**
-     * Reverse the migrations.
-     *
-     * @return void
-     */
-    public function down()
-    {
-        Schema::dropIfExists('kelas');
-    }
+  /**
+   * Reverse the migrations.
+   *
+   * @return void
+   */
+  public function down()
+  {
+    Schema::dropIfExists('kelas');
+  }
 }
