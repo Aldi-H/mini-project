@@ -19,6 +19,7 @@ class CreateAbsensiTable extends Migration
       $table->dateTime('waktu_masuk');
       $table->dateTime('waktu_keluar');
       $table->string('kode_absen');
+      $table->smallInteger('status');
       $table->timestamps();
     });
   }

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Absensi;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class AbsensiController extends Controller
 {
@@ -37,7 +38,15 @@ class AbsensiController extends Controller
    */
   public function store(Request $request)
   {
-    //
+    Absensi::create([
+      'id_user' => Auth::id(),
+      'waktu_masuk' => null,
+      'waktu_keluar' => null,
+      'kode_absen' => strtoupper(Str::random(6)),
+      'status' => 0,
+    ]);
+
+    return redirect()->route('dashboard');
   }
 
   /**

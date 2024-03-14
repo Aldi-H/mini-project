@@ -15,7 +15,7 @@
     <div class="row">
       {{-- @if ($user ?? ''->role == 'admin' || $user ?? ''->role == 'pj') --}}
         <div class="col-lg-6">
-          <form id="form-data-kode" method="post" data-route="" enctype="multipart/form-data">
+          <form id="form-data-kode" method="post" data-route="" enctype="multipart/form-data" action="/attendance/entry">
             {{ csrf_field() }}
             <div class="card">
               <div class="card-header">

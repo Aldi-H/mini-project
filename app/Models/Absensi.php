@@ -14,8 +14,9 @@ class Absensi extends Model
   protected $fillable = [
     'id_user',
     'waktu_masuk',
-    'waktu_kelua',
+    'waktu_keluar',
     'kode_absen',
+    'status',
   ];
 
   public function kelas()
