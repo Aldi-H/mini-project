@@ -23,8 +23,14 @@ Auth::routes();
 
 Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
 
-Route::get('/home', [HomeController::class, 'index'])->name('home');
+Route::get('/dashboard', [HomeController::class, 'index'])->name('dashboard');
 
-Route::get('/dashboard', function () {
-  return view('index');
-});
+// Route::prefix('/dashboard')->middleware(['role:admin, pj'])->group(function () {
+//   Route::get('/', function () {
+//       return view('dashboard');
+//     });
+// });
+
+// Route::get('/dashboard', function () {
+//   return view('dashboard');
+// });
