@@ -25,6 +25,8 @@ Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
 
 Route::get('/dashboard', [HomeController::class, 'index'])->name('dashboard');
 
+
+
 // Route::prefix('/dashboard')->middleware(['role:admin, pj'])->group(function () {
 //   Route::get('/', function () {
 //       return view('dashboard');
